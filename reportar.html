@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario académico para registrar un nuevo caso de rescate animal.">
+  <title>Huellas de Esperanza | Reportar rescate</title>
+</head>
+<body>
+  <header>
+    <p><strong>HUELLAS DE ESPERANZA</strong></p>
+    <p>Sistema comunitario de control de rescate y adopción</p>
+  </header>
+  <nav aria-label="Navegación principal">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="reportar.html" aria-current="page">Reportar un rescate</a></li>
+      <li><a href="rescates.html">Casos registrados</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section aria-labelledby="titulo-formulario">
+      <h1 id="titulo-formulario">Registrar un nuevo rescate</h1>
+      <p>Complete los datos iniciales del animal encontrado. Los campos marcados como obligatorios deben contener información.</p>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Identificación del caso</legend>
+          <p>
+            <label for="titulo-caso">Título del caso o nombre provisional:</label><br>
+            <input type="text" id="titulo-caso" name="titulo_caso" minlength="3" maxlength="80" required>
+          </p>
+          <p>
+            <label for="categoria">Categoría del animal:</label><br>
+            <select id="categoria" name="categoria" required>
+              <option value="">Seleccione una categoría</option>
+              <option value="perros">Perros</option>
+              <option value="gatos">Gatos</option>
+              <option value="fauna-silvestre">Fauna silvestre</option>
+            </select>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Valoración inicial</legend>
+          <p>Seleccione el nivel de urgencia médica:</p>
+          <p><input type="radio" id="urgencia-alta" name="urgencia" value="alta" required> <label for="urgencia-alta">Alta</label></p>
+          <p><input type="radio" id="urgencia-media" name="urgencia" value="media"> <label for="urgencia-media">Media</label></p>
+          <p><input type="radio" id="urgencia-baja" name="urgencia" value="baja"> <label for="urgencia-baja">Baja</label></p>
+          <p>
+            <label for="descripcion">Descripción del estado en que se encontró:</label><br>
+            <textarea id="descripcion" name="descripcion" rows="6" cols="55" minlength="10" maxlength="1000" required></textarea>
+          </p>
+        </fieldset>
+        <p><button type="submit">Enviar reporte de prueba</button> <button type="reset">Limpiar formulario</button></p>
+      </form>
+    </section>
+    <section aria-labelledby="consideraciones">
+      <h2 id="consideraciones">Antes de enviar</h2>
+      <ul>
+        <li>Describa únicamente información observada o confirmada.</li>
+        <li>No manipule animales silvestres o heridos si no cuenta con capacitación.</li>
+        <li>Ante una emergencia, contacte a los servicios competentes.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Huellas de Esperanza | Prototipo académico de HTML5</p>
+    <p>© 2026. Proyecto demostrativo sin almacenamiento de datos.</p>
+  </footer>
+</body>
+</html>
